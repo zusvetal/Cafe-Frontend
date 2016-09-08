@@ -1,0 +1,278 @@
+/*******************************************************************************/
+/*************************** General ******************************************/
+/*******************************************************************************/
+.no-border,
+.no-border>tbody,
+.no-border>tbody>tr>td, 
+.no-border>tbody>tr>th, 
+.no-border>tfoot>tr>td, 
+.no-border>tfoot>tr>th, 
+.no-border>thead>tr>td, 
+.no-border>thead>tr>th{
+    border:0px !important;
+}
+html,body{
+    height: 100%;
+}
+/*******************************************************************************/
+/*************************** Icon ******************************************/
+/*******************************************************************************/
+.glyphicon {
+    color: #bbb;
+    margin: 5px;
+}
+.glyphicon:hover{
+    color: #111;
+    cursor:pointer;
+}
+.warn-sign{
+    color: rgba(215, 215, 54, 0.9);
+    font-size: 20px !important;
+}
+td.icon{
+    min-width:35px !important;
+}
+/*******************************************************************************/
+/****************************** Base ******************************************/
+/*******************************************************************************/
+
+#container{
+    min-height: 100% ;
+    position:relative;
+}
+#content{
+    padding-top:70px;
+    position:relative;
+    padding-bottom: 60px;
+}   
+#footer{
+    background: rgba(73,155,234,1);
+    background: -moz-linear-gradient(left, rgba(73,155,234,1) 17%, rgba(73,155,234,1) 48%, rgba(48,115,212,1) 77%, rgba(38,99,202,0.99) 89%, rgba(29,84,194,0.99) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(17%, rgba(73,155,234,1)), color-stop(48%, rgba(73,155,234,1)), color-stop(77%, rgba(48,115,212,1)), color-stop(89%, rgba(38,99,202,0.99)), color-stop(100%, rgba(29,84,194,0.99)));
+    background: -webkit-linear-gradient(left, rgba(73,155,234,1) 17%, rgba(73,155,234,1) 48%, rgba(48,115,212,1) 77%, rgba(38,99,202,0.99) 89%, rgba(29,84,194,0.99) 100%);
+    background: -o-linear-gradient(left, rgba(73,155,234,1) 17%, rgba(73,155,234,1) 48%, rgba(48,115,212,1) 77%, rgba(38,99,202,0.99) 89%, rgba(29,84,194,0.99) 100%);
+    background: -ms-linear-gradient(left, rgba(73,155,234,1) 17%, rgba(73,155,234,1) 48%, rgba(48,115,212,1) 77%, rgba(38,99,202,0.99) 89%, rgba(29,84,194,0.99) 100%);
+    background: linear-gradient(to right, rgba(73,155,234,1) 17%, rgba(73,155,234,1) 48%, rgba(48,115,212,1) 77%, rgba(38,99,202,0.99) 89%, rgba(29,84,194,0.99) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#1d54c2', GradientType=1 );
+
+    position:absolute;
+    height: 60px;
+    bottom:0;
+    width:100%;
+    color:white;
+}
+
+#footer .footer-sign{
+    font-style: italic;
+    margin-top: 20px;
+
+}
+
+/*******************************************************************************/
+/*************************** goods_list ***************************************/
+/*******************************************************************************/
+#goodsList .goods-table{
+    margin-left: 5%;
+    width: 95%;
+}
+#goodsList tr.category{
+    border:none !important;
+    font-weight: 600 !important;
+  
+}
+
+#goodsList tr.category{   
+  
+}
+
+#goodsList tr.category td.goods-number{
+    width: 40px;
+}
+#goodsList tr.category td.index
+{
+    width: 80px; 
+}
+#goodsList tr.good td.index{
+   width: 10%; 
+}
+
+#goodsList tr.good td.action,
+#goodsList tr.category td.action
+{
+   width: 40px;
+   border: none !important;
+}
+#goodsList tr.good td.action span,
+#goodsList tr.category td.action span
+{
+   display: none; 
+}
+#goodsList tr.good:hover td.action span,
+#goodsList tr.category:hover td.action span{
+   display: inline; 
+}
+#goodsList tr.good{
+    display:block;
+    width: 100%;
+}
+#goodsList tr.good td:nth-of-type(1){
+    width:10%;
+}
+#goodsList tr.good td:nth-of-type(2){
+    width:88%;
+}
+/*#goodsList tr.good td:nth-of-type(3){
+    width:10%;
+}*/
+/*
+#goodsList ul.goods-list li{
+    position: relative;
+   list-style-type:none;
+   width: 100%;
+   
+}
+#goodsList ul.goods-list li span{
+     float:left;
+     padding:5 0 0 4;
+     display:block;
+     background-color: #dff0d8;
+}
+
+#goodsList li.product span{
+}
+#goodsList li.category span:nth-of-type(1){  
+    width: 10%;
+}
+#goodsList li.category span:nth-of-type(2){
+    width: 80%;
+}
+#goodsList li.category span:nth-of-type(3){
+    width: 10%;
+}
+
+
+#goodsList li.product span:nth-of-type(1){  
+    width: 10%;
+}
+#goodsList li.product span:nth-of-type(2){
+    width: 80%;
+}
+#goodsListli.product span:nth-of-type(3){
+    width: 10%;
+}*/
+
+
+/*******************************************************************************/
+/*************************** purchase list ************************************/
+/*******************************************************************************/
+
+.no-active{
+    background-color: rgba(240, 240, 240, 0.5);
+    cursor: not-allowed;
+}
+
+#purchaseList .goods-field{
+    padding: 0;
+}
+#purchaseList .goods-field table{
+    margin: 0;
+}
+#purchaseList th,
+#purchaseList .cat-name,
+#purchaseList .goods-number
+{
+    text-align:center;
+}
+
+#purchaseList .tools{
+    border-bottom: 0;
+    border-top: 0;
+}
+/*#purchaseList .input{
+    padding:0;
+}*/
+#purchaseList .input input {
+    border:none;
+
+}
+/*******************************************************************************/
+/*************************** sections/purchasesList.html **********************/
+/*******************************************************************************/
+#evPurchases tr td{
+        cursor:pointer;
+}
+/*******************************************************************************/
+/*************************** expenses.html **********************/
+/*******************************************************************************/
+#expensesList tr.purchases{
+        cursor:pointer;
+}
+/*******************************************************************************/
+/*************************** login ********************************************/
+/*******************************************************************************/
+#loginPage{
+    background: rgba(255,255,255,0.9);
+    position:fixed;
+    top: 0;
+    right: 0;
+    bottom: 60px;
+    left: 0;
+/*    margin-top: -70px;
+    min-height:500px;
+    min-width: 100%;*/
+    z-index:1050;
+    
+    
+}
+#loginPage form{
+    margin-top: 40%;
+/*    margin-top: 70px;*/
+/*    border: 1px solid #ccc;*/
+    border-radius: 5px;
+}
+#loginPage .info-field{
+    color:red;
+}
+
+/*******************************************************************************/
+/*************************** Animate ********************************************/
+/*******************************************************************************/
+  .animate-goods.ng-move,
+  .animate-goods.ng-enter,
+  .animate-goods.ng-leave {
+    -webkit-transition:all linear 0.3s;
+    transition:all linear 0.3s;
+  }
+
+  .animate-goods.ng-leave.ng-leave-active,
+  .animate-goods.ng-move,
+  .animate-goods.ng-enter {
+/*    opacity:0;*/
+    margin-left:1000px;
+  }
+
+  .animate-goods.ng-leave,
+  .animate-goods.ng-move.ng-move-active,
+  .animate-goods.ng-enter.ng-enter-active {
+/*    opacity:1;*/
+    margin-left: 0;
+  }
+  /*************************************/
+  .animate-category.ng-move,
+  .animate-category.ng-enter,
+  .animate-category.ng-leave {
+    -webkit-transition:all linear 0.8s;
+    transition:all linear 0.8s;
+  }
+
+  .animate-category.ng-leave.ng-leave-active,
+  .animate-category.ng-move,
+  .animate-category.ng-enter {
+    opacity:0;
+  }
+
+  .animate-category.ng-leave,
+  .animate-category.ng-move.ng-move-active,
+  .animate-category.ng-enter.ng-enter-active {
+    opacity:1;
+  }

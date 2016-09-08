@@ -1,0 +1,30 @@
+<modal-dialog modal-settings="modalSettings" show='modalShown'></modal-dialog>
+<center><h2>{{title}}</h2></center>
+<div id="goodsList" class="row" >
+    <div class="col-md-8 col-md-offset-2">
+        <center><a class="btn btn-default" ng-click="getCategoryForm()">Add category</a></center><br/> 
+        <div ng-include="catForm"></div>
+        <table class="table no-border">
+            <tbody class="animate-category" ng-repeat="cat in categories">
+                <tr class="category success">
+                    <td class="index">{{$index + 1}}</td>
+                    <td><center>{{cat.name}}</center></td>
+            <td class="goods-number"><span class="badge">{{cat.goods.length}}</span></td>
+            <td class="action"><span class="glyphicon glyphicon-remove" ng-click="removeCategory($index)"></span></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+            <center><span class="glyphicon glyphicon-plus" ng-click="getGoodForm($index)"></span></center>
+            <table class="table table-condensed table-hover  goods-table">
+                <tr class="good animate-goods" ng-repeat="good in cat.goods">
+                    <td class="index">{{$index + 1}}</td>
+                    <td>{{good.name}}</td>
+                    <td class="action"><span class="glyphicon glyphicon-remove" ng-click="removeGood($parent.$index, $index)" ></span></td>
+                </tr>
+            </table>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

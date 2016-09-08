@@ -1,0 +1,13 @@
+<div id="alertWindow">
+<!--    <div class="modal-header" ng-bind-html="headerHtml"></div>-->
+    <div class="modal-body">
+<!--        <div ng-bind-html="headerHtml"></div>-->
+        <div class="alert alert-warning" align="center">
+            <span class="glyphicon glyphicon-warning-sign warn-sign"></span>
+            <span  ng-bind="data.text"></span>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <center> <button class="btn btn-warning " ng-click="ok()">{{data.ok}}</button></center>
+    </div>
+</div>

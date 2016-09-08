@@ -1,0 +1,14 @@
+<table  id="evPurchases" ng-controller="purchasesListCtrl" class="table table-hover">
+    <tr>
+        <th></th>
+        <th>Назва</th>
+        <th>Дата створення</th>
+        <th>Опис</th>
+    </tr>
+    <tr ng-repeat="p in purchases" ng-click="choosePurchase(p.id)" ng-class="isCurrent(p.id)">
+        <td>{{$index + 1}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.date}}</td>
+        <td>{{p.descr}}</td>
+    </tr>
+</table>

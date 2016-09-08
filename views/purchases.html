@@ -1,0 +1,70 @@
+<modal-dialog modal-settings="modalSettings" show='modalShown'></modal-dialog>
+<div id="purchaseList" class="row" >
+    <div class="col-md-8 col-md-offset-2">
+        <center>
+            <button class="btn btn-default" ng-click="getPurchaseForm()">Нова закупка</button>
+            <button class="btn btn-default" ng-click="getPurchasesList()">Архів закупок</button>
+            <button class="btn btn-default" ng-click="toggleEditTolls()">Інструменти</button>
+        </center>
+        <br/>         
+        <center><h3>{{title}}</h3></center>
+        <table class="table table-bordered">
+            <thead>
+            <th class="col-md-1"></th>   
+            <th class="col-md-4">Назва</th>
+            <th class="col-md-2">шт/кг</th>
+            <th class="col-md-2">Ціна за одиницю</th>
+            <th class="col-md-2" >Загальна ціна</th>
+            <th class="col-md-2" ng-class="showTools" ></th>
+            </thead>
+            <tbody  ng-repeat-start="cat in categories">
+                <tr class="category success"  ng-class="hasItems(cat.id)">
+                    <td class="index"></td>
+                    <td class="cat-name" colspan="3"><b><em>{{cat.name}}</em></b></td>
+                    <td align="right"><b>{{totalCatPrice(cat.id)}}</b></td>
+                    <td class="tools goods-number" ng-class="showTools"><span class="badge">{{choosingItems(cat.id)}}</span></td>
+                    <td ng-class="showTools" >
+                        <span class="glyphicon glyphicon-plus" ng-click="addGood(cat.id,cat.name)" uib-tooltip="Добавити продукт" tooltip-placement="auto bottom-left"></span>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody class="animate-category" ng-switch on="isBelong(good.id)" ng-repeat="good in cat.goods" ng-repeat-end>
+                <tr ng-switch-when="belong"  >
+                    <td class="index col-md-1"></td>
+                    <td class="col-md-4">{{good.name}}</td>
+                    <td  class="col-md-2 input">
+                        <input type="text" class="form-control" ng-keyup="pcsManipulate(purchaseGoods[good.id].id, purchaseGoods[good.id].pcs)"  ng-model="purchaseGoods[good.id].pcs">
+                    </td>
+                    <td  class="col-md-2 input">
+                        <input type="text" class="form-control" ng-keyup="priceManipulate(purchaseGoods[good.id].id, purchaseGoods[good.id].price)" ng-model="purchaseGoods[good.id].price">
+                    </td>
+                    <td class="col-md-2">
+                        {{totalItemPrice(good.id, cat.id)}}
+                    </td>
+                    <td class="col-md-1 tools" ng-class="showTools">
+                        <button class="btn btn-default btn-sm btn-block btn-danger" ng-click="delItem(good.id)">Видалити</button>
+                    </td>
+                </tr>
+                <tr  ng-switch-when="noBelong" class="no-active" ng-class="showTools">
+                    <td class="index col-md-1"></td>
+                    <td class="col-md-4">{{good.name}}</td>
+                    <td  class="col-md-2">
+                    </td>
+                    <td  class="col-md-2">
+                    </td>
+                    <td class="col-md-2"></td>
+                    <td class="col-md-1 tools">
+                        <button class="btn btn-default btn-sm btn-block btn-info" ng-click="addItem(good.id)">Добавити</button>
+                    </td>
+                </tr>
+
+            </tbody>
+            <tbody>
+                <tr>
+                    <td colspan="4" align="right"><b> Загальна ціна:</b></td>
+                    <td colspan="2"><b>{{totalPrice}}</b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

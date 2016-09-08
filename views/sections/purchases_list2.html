@@ -1,0 +1,30 @@
+<div class="modal-header">
+    <center><h4 class="modal-title" ng-bind="data.title"></h4></center>
+</div>
+<div class="modal-body">
+    <div class="alert alert-warning">
+        <span class="glyphicon glyphicon-warning-sign warn-sign"></span>
+        {{data.info}}
+    </div>
+    <table  id="evPurchases"  class="table table-hover">
+        <tr>
+            <th></th>
+            <th>Назва</th>
+            <th>Дата створення</th>
+            <th>Опис</th>
+        </tr>
+        <tr ng-repeat="p in item" ng-click="redirectTo(p.purchase.id)">
+            <td>{{$index + 1}}</td>
+            <td>{{p.purchase.name}}</td>
+            <td>{{p.purchase.date}}</td>
+            <td>{{p.purchase.descr}}</td>
+        </tr>
+    </table>
+</div>
+<!--<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">{{data.ok}}</button>
+    <button class="btn btn-default" ng-click="cancel()">{{data.cancel}}</button>
+</div>-->
+
+
+

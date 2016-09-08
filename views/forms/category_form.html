@@ -1,0 +1,11 @@
+<form name="categoryForm" ng-controller="categoryFormCtrl" novalidate ng-submit="submit(cat,categoryForm.$valid)">
+    <table class="table no-border">
+        <tr>
+            <td>New category:</td>
+            <td><input type="text" name="name" class="form-control" required ng-model="cat.name"></td>
+        </tr>
+    </table>
+    <div align="right">       
+        <button type="submit" class="btn btn-primary"  ng-disabled="categoryForm.$invalid">submit</button>
+    </div>   
+</form>

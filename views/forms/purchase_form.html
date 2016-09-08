@@ -1,0 +1,15 @@
+<form name="purchaseForm" ng-controller="purchaseFormCtrl" novalidate ng-submit="submit(purchase,purchaseForm.$valid)">
+    <table class="table no-border">
+        <tr>
+            <td>Введіть назву:</td>
+            <td><input type="text" name="name" class="form-control" required ng-model="purchase.name"></td>
+        </tr>
+        <tr >
+            <td>Описання:</td>
+            <td><textarea type="text" name="descr" class="form-control"  ng-model="purchase.descr" ></textarea></td>
+        </tr>
+    </table>
+    <div align="right">       
+        <button type="submit" class="btn btn-primary"  ng-disabled="purchaseForm.$invalid">submit</button>
+    </div>   
+</form>

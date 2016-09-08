@@ -1,0 +1,15 @@
+<form name="goodForm" ng-controller="goodFormCtrl" novalidate ng-submit="submit(good,goodForm.$valid)">
+    <table class="table no-border">
+        <tr>
+            <td>Введіть назву:</td>
+            <td><input type="text" name="name" class="form-control" required ng-model="good.name"></td>
+        </tr>
+        <tr class="hidden">
+            <td>idCategory</td>
+            <td><input type="text" name="category_id" class="form-control" required ng-model="good.category_id" ></td>
+        </tr>
+    </table>
+    <div align="right">       
+        <button type="submit" class="btn btn-primary"  ng-disabled="goodForm.$invalid">submit</button>
+    </div>   
+</form>
