@@ -2,7 +2,6 @@ var app = angular.module('goodsApp',
 ['ngRoute', 'ngResource','ngAnimate', 'angular-confirm', 'ui.bootstrap'])
         .constant('apiServer', 'http://10.46.202.200:888')
         .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-//        $locationProvider.html5Mode(true);
                 $routeProvider
                         .when('/', {
                             access: {requiredLogin: true}
